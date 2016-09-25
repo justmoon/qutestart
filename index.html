@@ -15,6 +15,10 @@
       const nowCropped = now.substr(0, now.length - 1)
       document.getElementsByClassName('clock')[0].innerHTML = nowCropped
     }, 1000)
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
   </script>
 </body>
 </html>
