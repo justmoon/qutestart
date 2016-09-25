@@ -1,28 +1,20 @@
-#bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	min-height: 100%;
-}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 body {
-	backround-size: cover;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #212121;
+  color: #FF9800;
 	font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-
-div.books {
-	text-align: left;
-	padding-left: 10px;
-
-	font-family: monospace;
-	font-weight: 300;
-	font-size: 0.75em;
-
-	position: fixed;
-	left: 15px;
-	top: 160px;
+.clock {
+  font-weight: 100;
+  font-size: 4em;
 }
 
 a:link {

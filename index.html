@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<style>
-img {
- 	height: auto;
-    	width: auto;
-	overflow: hidden; 
-}
-
-</style>	
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -15,15 +7,14 @@ img {
 </head>
 
 <body>
-	
-<img src="ibm.png" id="bg" alt="">
-	<div class="books">
-		<a href="https://gnu.org/">gnu</a><br>
-		<a href="https://linux.com/">linux</a><br>
-		<a href="https://archlinux.org/">archlinux</a><br>
-		<a href="https://qutebrowser.org/"/>qutebrowser</a><br>
-		<a href="https://github.com/"/>github</a><br>
-		<a href="https://aur.archlinux.org/">aur</a><br>
-</div>
+  <div class="clock"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  <script>
+    setInterval(() => {
+      const now = moment().format('h:mma')
+      const nowCropped = now.substr(0, now.length - 1)
+      document.getElementsByClassName('clock')[0].innerHTML = nowCropped
+    }, 1000)
+  </script>
 </body>
 </html>
