@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -15,11 +15,13 @@
   <div class="clock"></div>
   <script src="moment.min.js"></script>
   <script>
-    setInterval(() => {
+    const refreshClock = () => {
       const now = moment().format('h:mma')
       const nowCropped = now.substr(0, now.length - 1)
       document.getElementsByClassName('clock')[0].innerHTML = nowCropped
-    }, 1000)
+    }
+    setInterval(refreshClock, 1000)
+    refreshClock()
 
     if ('serviceWorker' in navigator &&
         !navigator.serviceWorker.controller) {
